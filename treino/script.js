@@ -80,5 +80,15 @@ const booksByCategory = [
         }
     }
 
-    
 
+//[{}, {}]    
+
+function countAmountCategoryAndBooks_(){
+    let contCategory = 0;
+    for(value of booksByCategory){
+        Object.keys(value).forEach((testCategory) =>{
+            if(testCategory.indexOf('category')) contCategory += 1;
+        });
+    }
+    return console.log(`Quantidade de categorias: ${Number(contCategory)}`);
+}
